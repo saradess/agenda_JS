@@ -23,10 +23,35 @@
         </div>
     </header>
     <hr>
-    <form id="form_agenda">
-        <input type="text" id="Nome-contato" required placeholder="Nome do contato"/>
-        <input type="number" id="telefone" required placeholder="Numero do contato"/>
-        <button type="submit">Adicionar</button>
-    </form>
+    <div class="body">
+        <form id="form-agenda">
+            <img src="./Midias/Icone_pessoa.png" alt="icone de uma pessoa"/>
+            <input type="text" id="Nome-contato" required placeholder="Nome do contato"/>
+            <img src="./Midias/icone_telefone.png" alt="icone de telefone"/>
+            <input type="number" id="telefone" required placeholder="Numero do contato"/>
+            <button type="submit">Adicionar</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>
+                        Nome do contato
+                    </th>
+                    <th>
+                        Numero de telefone
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total de contatos</td>
+                    <td>---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
 </body>
 </html>
