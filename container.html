@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#agenda">Agenda</a>
+                    <a href="./index.html">Agenda</a>
                 </li>
                 <li>
                     <a href="./container.html">Lista de Tarefas</a>
@@ -26,34 +26,22 @@
         </div>
     </header>
     <hr>
-    <h1>AGENDA</h1>
+    <h1>LISTA DE TAREFAS</h1>
     <div class="body">
-        <form id="form-agenda">
-            <img src="./Midias/Icone_pessoa.png" alt="icone de uma pessoa"/>
-            <input type="text" id="Nome-contato" required placeholder="Nome do contato"/>
-            <img src="./Midias/icone_telefone.png" alt="icone de telefone"/>
-            <input type="number" id="telefone" required placeholder="Numero do contato"/>
+        <form id="lista-de-tarefas">
+            <input id="tarefa" type="text" placeholder="tarefa">
             <button type="submit">Adicionar</button>
         </form>
         <table cellspacing="0" id="agenda">
             <thead>
                 <tr>
                     <th>
-                        Nome do contato
-                    </th>
-                    <th>
-                        Numero de telefone
+                        Tarefa
                     </th>
                 </tr>
             </thead>
             <tbody>
             </tbody>
-            <tfoot>
-                <tr>
-                    <td>Total de contatos</td>
-                    <td>---</td>
-                </tr>
-            </tfoot>
         </table>
     </div>
     <script src="./main.js"></script>

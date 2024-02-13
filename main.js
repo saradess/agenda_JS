@@ -1,4 +1,5 @@
 const form = document.getElementById('form-agenda');
+const preencher = document.getElementById('lista-de-tarefas')
 const nome = [];
 const telefone = [];
 
@@ -38,4 +39,7 @@ function atualizaTabela() {
     const tfoot = document.querySelector('tfoot');
     tfoot.innerHTML = `<tr><td>Total de contatos</td><td>${nome.length}</td></tr>`;
 }
+
+preencher.addEventListener('submit' function(e) {
+    e.preventDefault();
 
