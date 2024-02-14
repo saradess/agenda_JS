@@ -1,5 +1,4 @@
 const form = document.getElementById('form-agenda');
-const preencher = document.getElementById('lista-de-tarefas')
 const nome = [];
 const telefone = [];
 
@@ -40,6 +39,21 @@ function atualizaTabela() {
     tfoot.innerHTML = `<tr><td>Total de contatos</td><td>${nome.length}</td></tr>`;
 }
 
-preencher.addEventListener('submit' function(e) {
-    e.preventDefault();
+$(document).ready(function() {
+    $('#lista-de-tarefas').submit(function(event) {
+        event.preventDefault();
+        
+        const novaTarefa = $('#tarefa').val();
+        
+        if (novaTarefa.trim() !== '') {
+            $('#lista').append('<li>' + novaTarefa + '</li>');
+            $('#tarefa').val('');
+        }
+});
+});
 
+$(document).ready(function(){
+    $('#lista').on('click','li',function(){
+        $(this).toggleClass('riscado');
+    });
+});

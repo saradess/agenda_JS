@@ -12,14 +12,11 @@
 <body>
     <header>
         <div class="container">
-            <img src="./Midias/black yellow minimalist Idea Logo.png" alt="logotipo escrito talkin em letras coloridas"/>
+            <img src="./midia/black yellow minimalist Idea Logo.png" alt="logotipo escrito talkin em letras coloridas"/>
         <nav>
             <ul>
                 <li>
-                    <a href="./index.html">Agenda</a>
-                </li>
-                <li>
-                    <a href="./container.html">Lista de Tarefas</a>
+                    <a href="#lista-de-tarefas">Lista de atividades</a>
                 </li>
             </ul>
         </nav>
@@ -29,21 +26,14 @@
     <h1>LISTA DE TAREFAS</h1>
     <div class="body">
         <form id="lista-de-tarefas">
-            <input id="tarefa" type="text" placeholder="tarefa">
+            <input id="tarefa" type="text" placeholder="Sua atividade aqui">
             <button type="submit">Adicionar</button>
         </form>
-        <table cellspacing="0" id="agenda">
-            <thead>
-                <tr>
-                    <th>
-                        Tarefa
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+        <ul id="lista">
+        </ul>
     </div>
-    <script src="./main.js"></script>
-</body>
+        <footer>&copy Talkin -todos os direitos reservados 2024</footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="./main.css"></script>
+    </body>
 </html>
