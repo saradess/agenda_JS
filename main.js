@@ -38,22 +38,3 @@ function atualizaTabela() {
     const tfoot = document.querySelector('tfoot');
     tfoot.innerHTML = `<tr><td>Total de contatos</td><td>${nome.length}</td></tr>`;
 }
-
-$(document).ready(function() {
-    $('#lista-de-tarefas').submit(function(event) {
-        event.preventDefault();
-        
-        const novaTarefa = $('#tarefa').val();
-        
-        if (novaTarefa.trim() !== '') {
-            $('#lista').append('<li>' + novaTarefa + '</li>');
-            $('#tarefa').val('');
-        }
-});
-});
-
-$(document).ready(function(){
-    $('#lista').on('click','li',function(){
-        $(this).toggleClass('riscado');
-    });
-});
