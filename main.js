@@ -1,40 +1,59 @@
-const form = document.getElementById('form-agenda');
-const nome = [];
-const telefone = [];
+$(document).ready(function(){
+    $('header a[href]').click(function(){
+        $('form').slideToggle();
+    })
 
-let linhas = '';
+    $('#lista-de-tarefas').on('submit', function(e){
+        e.preventDefault();
+        
+        const novaTarefa = $('#tarefa').val();
+        
+        if (novaTarefa.trim() !== '') {
+            $('#lista').append('<li>' + novaTarefa + '</li>');
+            $('#tarefa').val('');
+        }
+    });
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    const formAgenda = $('#form-agenda');
+    const nome = [];
+    const telefone = [];
+    let linhas = '';
 
-    adicionaLinha();
-    atualizaTabela();
-});
+    formAgenda.on('submit', function(e) {
+        e.preventDefault();
 
-function adicionaLinha () {
-    const inputNomeContato = document.getElementById('Nome-contato');
-    const inputTelefone = document.getElementById('telefone');
+        adicionaLinha();
+        atualizaTabela();
+    });
 
-    if(nome.includes(inputNomeContato.value)) {
-        alert(`O Nome: ${inputNomeContato.value} já foi adicionado`);
-    } else {
-        nome.push(inputNomeContato.value);
-        telefone.push(parseFloat(inputTelefone.value));
+    function adicionaLinha() {
+        const inputNomeContato = $('#Nome-contato');
+        const inputTelefone = $('#telefone');
 
-        linhas += '<tr>';
-        linhas += `<td>${inputNomeContato.value}</td>`;
-        linhas += `<td>${inputTelefone.value}</td>`;
-        linhas += '</tr>';
+        if(nome.includes(inputNomeContato.val())) {
+            alert(`O Nome: ${inputNomeContato.val()} já foi adicionado`);
+        } else {
+            nome.push(inputNomeContato.val());
+            telefone.push(parseFloat(inputTelefone.val()));
+
+            linhas += '<tr>';
+            linhas += `<td>${inputNomeContato.val()}</td>`;
+            linhas += `<td>${inputTelefone.val()}</td>`;
+            linhas += '</tr>';
+        }
+
+        inputNomeContato.val('');
+        inputTelefone.val('');
     }
 
-    inputNomeContato.value = '';
-    inputTelefone.value = '';
-}
+    function atualizaTabela() {
+        const corpoTabela = $('tbody');
+        corpoTabela.html(linhas);
 
-function atualizaTabela() {
-    const corpoTabela = document.querySelector('tbody');
-    corpoTabela.innerHTML = linhas;
+        const tfoot = $('tfoot');
+        tfoot.html(`<tr><td>Total de contatos</td><td>${nome.length}</td></tr>`);
+    }
+});
 
-    const tfoot = document.querySelector('tfoot');
-    tfoot.innerHTML = `<tr><td>Total de contatos</td><td>${nome.length}</td></tr>`;
-}
+
+
