@@ -12,8 +12,8 @@
 <body>
     <header>
         <div class="container">
-            <img src="./Midias/black yellow minimalist Idea Logo.png" alt="logotipo escrito talkin em letras coloridas"/>
-        <nav>
+            <h1>Talkin</h1>
+            <nav>
             <ul>
                 <li>
                     <a href="#lista-de-tarefas">Lista de atividades</a>
@@ -25,6 +25,12 @@
         </nav>
         </div>
     </header>
+    <div class="slides">
+        <img src="./Midias/slide_1.jpg"/>
+        <img src="./Midias/slide_2.jpg"/>
+        <img src="./Midias/slide_3.jpg"/>
+        <img src="./Midias/slide_4.jpg"/>
+    </div>
     <hr>
     <h1>LISTA DE TAREFAS</h1>
     <div class="body">
@@ -41,6 +47,14 @@
     </div>
         <footer>&copy Talkin -todos os direitos reservados 2024</footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.slides').slick({
+                    autoplay: true,
+                });
+            })
+        </script>
         <script src="./main.js"></script>
     </body>
 </html>

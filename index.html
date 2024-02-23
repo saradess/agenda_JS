@@ -8,11 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="./Midias/black yellow minimalist Idea Logo.png" alt="logotipo escrito talkin em letras coloridas"/>
+            <h1>Talkin</h1>
         <nav>
             <ul>
                 <li>
@@ -25,8 +27,14 @@
         </nav>
         </div>
     </header>
+    <div class="slides">
+        <img src="./Midias/slide_1.jpg"/>
+        <img src="./Midias/slide_2.jpg"/>
+        <img src="./Midias/slide_3.jpg"/>
+        <img src="./Midias/slide_4.jpg"/>
+    </div>
     <hr>
-    <h1>AGENDA</h1>
+    <h2>Agenda</h2>
     <div class="body">
         <form id="form-agenda">
             <img src="./Midias/Icone_pessoa.png" alt="icone de uma pessoa"/>
@@ -59,7 +67,15 @@
         </table>
     </div>
     <footer>&copy Talkin -todos os direitos reservados 2024</footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slides').slick({
+            autoplay: true,
+        });
+    })
+</script>
     <script src="./main.js"></script>
 </body>
 </html>

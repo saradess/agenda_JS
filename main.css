@@ -1,32 +1,13 @@
 *{
     margin: 0;
     padding: 0 16px;
-    box-sizing: border-box;
+    box-sizing:border-box;
     font-family: 'Oswald', sans-serif;
 }
 
-header .container img {
-    height: 300px;
-    padding: 0;
+html{
+    overflow-x: hidden;
 }
-
-header nav li {
-    display: flex;
-    margin-left: 16px;
-    font-size: 18px;
-}
-
-header nav li a{
-    color:#e8d501;
-    text-decoration: none;
-    font-size: 50px;
-}
-
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    }
 
 .body {
     max-width: 960px;
@@ -42,9 +23,70 @@ body hr{
 }
 
 body h1 {
-    color:#e8d501;
+    font-weight: 400;
+    font-style: bold;
+    color:#000000;
     text-decoration: none;
     font-size: 60px;
+}
+
+body h2{
+    font-size: 50px;
+    font-style: normal;
+
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #eaadf17f;
+}
+
+
+
+header > .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+header > .container #logo {
+    height: 300px;
+    padding-top: 16px;
+}
+
+nav {
+    padding: 0;
+    display: flex;
+    margin-left: 16px;
+    font-size: 18px;
+
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color:#000000;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.slides img{
+    height: 800px;
+    width: 100%;
+    display:box;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
 }
 
 form{
