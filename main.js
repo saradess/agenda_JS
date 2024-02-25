@@ -12,6 +12,11 @@ $(document).ready(function(){
             $('#lista').append('<li>' + novaTarefa + '</li>');
             $('#tarefa').val('');
         }
+        
+            $('#lista').on('click','li',function(){
+                $(this).toggleClass('riscado');
+            });
+
     });
 
     const formAgenda = $('#form-agenda');
