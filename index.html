@@ -15,17 +15,24 @@
     <header>
         <div class="container">
             <h1>Talkin</h1>
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
         <nav>
-            <ul>
-                <li>
-                    <a href="#agenda">Agenda</a>
-                </li>
-                <li>
-                    <a href="./container.html">Lista de Tarefas</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#form-agenda">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="./container.html">Lista de Tarefas</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        </div>
     </header>
     <div class="slides">
         <img src="./Midias/slide_1.jpg"/>
@@ -37,10 +44,10 @@
     <h2>Agenda</h2>
     <div class="body">
         <form id="form-agenda">
-            <img src="./Midias/Icone_pessoa.png" alt="icone de uma pessoa"/>
+            <img src="./Midias/perfil.gif" alt="icone de uma pessoa"/>
             <label for="Nome-contato">Nome:</label>
             <input type="text" id="Nome-contato" required placeholder="Nome do contato"/>
-            <img src="./Midias/icone_telefone.png" alt="icone de telefone"/>
+            <img src="./Midias/ligacao-de-emergencia.gif" alt="icone de telefone"/>
             <label for="Nome-contato">Telefone:</label>
             <input type="number" id="telefone" required placeholder="Numero do contato"/>
             <button type="submit">Adicionar</button>
@@ -74,6 +81,10 @@
         $('.slides').slick({
             autoplay: true,
         });
+
+        $('.menu-hamburguer').click(function(){
+    $('nav').slideToggle();
+});
     })
 </script>
     <script src="./main.js"></script>

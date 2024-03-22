@@ -15,17 +15,24 @@
     <header>
         <div class="container">
             <h1>Talkin</h1>
-            <nav>
-            <ul>
-                <li>
-                    <a href="./index.html">Agenda</a>
-                </li>
-                <li>
-                    <a href="#lista-de-atividades">Lista de atividades</a>
-                </li>
-            </ul>
+            <div class="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="./index.html">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="#lista-de-tarefas">Lista de Tarefas</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        </div>
     </header>
     <div class="slides">
         <img src="./Midias/slide_1.jpg"/>
@@ -37,7 +44,7 @@
     <h1>LISTA DE TAREFAS</h1>
     <div class="body">
         <form id="lista-de-tarefas">
-            <img src="./Midias/icone_lista.jpg" alt="lista de checagem"/>
+            <img src="./Midias/lista-de-controle.gif" alt="lista de checagem"/>
             <label for="Atividade">Atividade:</label>
             <input id="tarefa" type="text" placeholder="Sua atividade aqui">
             <button type="submit">Adicionar</button>
@@ -55,6 +62,10 @@
                 $('.slides').slick({
                     autoplay: true,
                 });
+
+                $('.menu-hamburguer').click(function(){
+            $('nav').slideToggle();
+        });
             })
         </script>
         <script src="./main.js"></script>

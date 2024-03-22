@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    $('header a[href]').click(function(){
-        $('form').slideToggle();
-    })
 
     $('#lista-de-tarefas').on('submit', function(e){
         e.preventDefault();
